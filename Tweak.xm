@@ -3,12 +3,21 @@
 %hook DATaskManager
 
 -(id)userAgent {
-	%log; id r = %orig; HBLogDebug(@" = %@", r);
+  id defaultUserAgent = %orig;
 
-	id newAgent = @"iPhone8C2/1307.36";
-	NSLog(@"ASTaskManager.userAgent overriding to: %@", newAgent);
-	return newAgent;
-} 
+  NSString *settingsPath = @"/var/mobile/Library/Preferences/com.derv82.exchangent.plist";
+  NSMutableDictionary *prefs = [[NSMutableDictionary alloc] initWithContentsOfFile:settingsPath];
+  BOOL isEnabled = [[prefs objectForKey:@"enabled"] boolValue];
+
+
+  if (!isEnabled) {
+    HBLogDebug(@"Exchangent disabled. Using default userAgent: %@", defaultUserAgent);
+    return defaultUserAgent;
+  }
+
+  id newAgent = @"iPhone8C2/1307.36";
+  HBLogDebug(@"Exchangent enabled. Using overridden userAgent: %@", newAgent);
+  return newAgent;
+}
 
 %end
-
