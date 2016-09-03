@@ -1,5 +1,5 @@
-Package: com.derv82.mailforce935
-Name: MailForce9.3.5
+Package: com.derv82.exchangent
+Name: Exchangent
 Depends: preferenceloader, mobilesubstrate
 Version: 0.0.1
 Architecture: iphoneos-arm

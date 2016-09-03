@@ -1,8 +1,8 @@
 include $(THEOS)/makefiles/common.mk
 
-TWEAK_NAME = MailForce935
-MailForce935_FRAMEWORKS = UIKit
-MailForce935_FILES = Tweak.xm
+TWEAK_NAME = Exchangent
+Exchangent_FRAMEWORKS = UIKit
+Exchangent_FILES = Tweak.xm
 
 include $(THEOS_MAKE_PATH)/tweak.mk
 
