@@ -1,0 +1,9 @@
+Package: com.derv82.mailforce935
+Name: MailForce9.3.5
+Depends: preferenceloader, mobilesubstrate
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: An awesome MobileSubstrate tweak!
+Maintainer: derv82
+Author: derv82
+Section: Tweaks
