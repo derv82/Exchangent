@@ -1,29 +1,311 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-	<key>items</key>
-	<array>
-		<dict>
-			<key>cell</key>
-			<string>PSGroupCell</string>
-			<key>label</key>
-			<string>Exchangent</string>
-		</dict>
-		<dict>
-			<key>cell</key>
-			<string>PSSwitchCell</string>
-			<key>default</key>
-			<true/>
-			<key>defaults</key>
-			<string>com.derv82.exchangent</string>
-			<key>key</key>
-			<string>enabled</string>
-			<key>label</key>
-			<string>Enabled</string>
-		</dict>
-	</array>
-	<key>title</key>
-	<string>Exchangent</string>
-</dict>
+  <dict>
+    <key>items</key>
+    <array>
+      <dict>
+        <key>cell</key>  <string>PSGroupCell</string>
+        <key>label</key> <string>Exchangent</string>
+      </dict>
+
+      <!-- Enabled -->
+      <dict>
+        <key>cell</key>     <string>PSSwitchCell</string>
+        <key>default</key>  <true/>
+        <key>defaults</key> <string>com.derv82.exchangent</string>
+        <key>key</key>      <string>enabled</string>
+        <key>label</key>    <string>Enabled</string>
+      </dict>
+
+      <dict>
+        <key>cell</key>
+        <string>PSGroupCell</string>
+        <key>label</key>
+        <string>Preset Versions</string>
+      </dict>
+
+      <!-- Devices -->
+      <dict>
+        <key>cell</key>     <string>PSLinkListCell</string>
+        <key>defaults</key> <string>com.derv82.exchangent</string>
+        <key>detail</key>   <string>PSListItemsController</string>
+        <key>key</key>      <string>device</string>
+        <key>label</key>    <string>Device</string>
+
+        <key>validTitles</key>
+        <array>
+          <string>iPod Touch 2</string>
+          <string>iPod Touch 3</string>
+          <string>iPod Touch 4</string>
+          <string>iPod Touch 5</string>
+          <string>iPad</string>
+          <string>iPad 2 WIFI</string>
+          <string>iPad 2 WIFI + 3G</string>
+          <string>iPad 2 WIFI + 3G CDMA</string>
+          <string>iPad Mini - WIFI</string>
+          <string>iPad Mini - WIFI + LTE</string>
+          <string>The New iPad (iPad 3)- WIFI</string>
+          <string>The New iPad (iPad 3) - WIFI + LTE</string>
+          <string>iPad with Retina Display (iPad 4) - WIFI</string>
+          <string>iPad with Retina Display (iPad 4) - WIFI + LTE</string>
+          <string>iPad Air - WIFI</string>
+          <string>iPad Air - WIFI + LTE</string>
+          <string>iPad Mini with Retina Display - WIFI</string>
+          <string>iPad Mini with Retina Display - WIFI + LTE</string>
+          <string>iPad Mini 4 - Wi-Fi</string>
+          <string>iPad Mini 4 - Wi-Fi + LTE</string>
+          <string>iPad Air 2 - WIFI</string>
+          <string>iPad Air 2 = WIFI + LTE</string>
+          <string>iPad Pro (7.9") - WiFi</string>
+          <string>iPad Pro (7.9") - WiFi + LTE</string>
+          <string>iPad Pro (12.9") - WiFi</string>
+          <string>iPad Pro (12.9") - WiFi + LTE</string>
+          <string>iPhone 3G</string>
+          <string>iPhone 3GS</string>
+          <string>iPhone 4 GSM</string>
+          <string>iPhone4 GSM</string>
+          <string>iPhone 4 CDMA</string>
+          <string>iPhone 4S</string>
+          <string>iPhone 5 GSM/LTE</string>
+          <string>iPhone 5 CDMA USA/China</string>
+          <string>iPhone 5C GSM/CDMA/Americas</string>
+          <string>iPhone 5C Europe/Asia</string>
+          <string>iPhone 5S GSM/CDMA/Americas</string>
+          <string>iPhone 5S Europe/Asia</string>
+          <string>iPhone 6 Plus</string>
+          <string>iPhone 6</string>
+          <string>iPhone 6S</string>
+          <string>iPhone 6S Plus</string>
+          <string>iPhone SE</string>
+        </array>
+
+        <key>validValues</key>
+        <array>
+          <string>iPod2C1</string>
+          <string>iPod3C1</string>
+          <string>iPod4C1</string>
+          <string>iPod5C1</string>
+          <string>iPad1C1</string>
+          <string>iPad2C1</string>
+          <string>iPad2C2</string>
+          <string>iPad2C3</string>
+          <string>iPad2C4</string>
+          <string>iPad2C5</string>
+          <string>iPad3C1</string>
+          <string>iPad3C2</string>
+          <string>iPad3C3</string>
+          <string>iPad3C4</string>
+          <string>iPad4C1</string>
+          <string>iPad4C2</string>
+          <string>iPad4C4</string>
+          <string>iPad4C5</string>
+          <string>iPad5C1</string>
+          <string>iPad5C2</string>
+          <string>iPad5C3</string>
+          <string>iPad5C4</string>
+          <string>iPad6C3</string>
+          <string>iPad6C4</string>
+          <string>iPad6C7</string>
+          <string>iPad6C8</string>
+          <string>iPhone1C2</string>
+          <string>iPhone2C1</string>
+          <string>iPhone3C1</string>
+          <string>iPhone3C2</string>
+          <string>iPhone3C3</string>
+          <string>iPhone4C1</string>
+          <string>iPhone5C1</string>
+          <string>iPhone5C2</string>
+          <string>iPhone5C3</string>
+          <string>iPhone5C4</string>
+          <string>iPhone6C1</string>
+          <string>iPhone6C2</string>
+          <string>iPhone7C1</string>
+          <string>iPhone7C2</string>
+          <string>iPhone8C1</string>
+          <string>iPhone8C2</string>
+          <string>iPhone8C4</string>
+        </array>
+        <key>default</key> <string>iPhone8C2</string>
+      </dict>
+
+      <!-- iOS Versions  -->
+      <dict>
+        <key>cell</key>     <string>PSLinkListCell</string>
+        <key>defaults</key> <string>com.derv82.exchangent</string>
+        <key>detail</key>   <string>PSListItemsController</string>
+        <key>key</key>      <string>iosVersion</string>
+        <key>label</key>    <string>iOS Version</string>
+
+        <key>validTitles</key>
+        <array>
+          <string>4.0</string>
+          <string>4.0.1</string>
+          <string>4.0.2</string>
+          <string>4.1</string>
+          <string>4.2.1</string>
+          <string>4.2.5</string>
+          <string>4.2.6</string>
+          <string>4.2.7</string>
+          <string>4.2.8</string>
+          <string>4.2.9</string>
+          <string>4.2.10</string>
+          <string>4.3</string>
+          <string>4.3.1</string>
+          <string>4.3.2</string>
+          <string>4.3.2</string>
+          <string>4.3.3</string>
+          <string>4.3.4</string>
+          <string>4.3.5</string>
+
+          <string>5.0</string>
+          <string>5.0.1</string>
+          <string>5.1</string>
+          <string>5.1.1</string>
+
+          <string>6.0</string>
+          <string>6.0.1</string>
+          <string>6.1</string>
+          <string>6.1.2</string>
+          <string>6.1.3</string>
+          <string>6.1.3</string>
+
+          <string>7.0</string>
+          <string>7.0.1</string>
+          <string>7.0.2</string>
+          <string>7.0.3</string>
+          <string>7.0.4</string>
+          <string>7.0.5</string>
+          <string>7.0.6</string>
+          <string>7.1</string>
+          <string>7.1.1</string>
+          <string>7.1.2</string>
+
+          <string>8.0</string>
+          <string>8.0.1</string>
+          <string>8.0.2</string>
+          <string>8.1</string>
+          <string>8.1.1</string>
+          <string>8.1.2</string>
+          <string>8.1.3</string>
+          <string>8.2</string>
+          <string>8.3</string>
+          <string>8.4</string>
+          <string>8.4.1</string>
+
+          <string>9.0</string>
+          <string>9.0.1</string>
+          <string>9.0.2</string>
+          <string>9.1</string>
+          <string>9.2</string>
+          <string>9.2.1</string>
+          <string>9.3</string>
+          <string>9.3.1</string>
+          <string>9.3.2</string>
+          <string>9.3.3</string>
+          <string>9.3.4</string>
+          <string>9.3.5</string>
+        </array>
+
+        <key>validValues</key>
+        <array>
+          <string>801.293</string>
+          <string>801.306</string>
+          <string>801.400</string>
+          <string>802.118</string>
+          <string>803.148</string>
+          <string>805.128</string>
+          <string>805.200</string>
+          <string>805.303</string>
+          <string>805.401</string>
+          <string>805.501</string>
+          <string>805.600</string>
+          <string>806.191</string>
+          <string>807.4</string>
+          <string>808.7</string>
+          <string>808.8</string>
+          <string>810.3</string>
+          <string>811.2</string>
+          <string>812.1</string>
+
+          <string>901.334</string>
+          <string>901.40x</string>
+          <string>902.17x</string>
+          <string>902.206</string>
+
+          <string>1001.40x</string>
+          <string>1001.52x</string>
+          <string>1002.14x</string>
+          <string>1002.146</string>
+          <string>1002.329</string>
+          <string>1002.350</string>
+
+          <string>1101.465</string>
+          <string>1101.470</string>
+          <string>1101.501</string>
+          <string>1102.511</string>
+          <string>1102.55400001</string>
+          <string>1102.601</string>
+          <string>1102.651</string>
+          <string>1104.169</string>
+          <string>1104.201</string>
+          <string>1104.257</string>
+
+          <string>1201.365</string>
+          <string>1201.366</string>
+          <string>1201.405</string>
+          <string>1202.410</string>
+          <string>1202.435</string>
+          <string>1202.440</string>
+          <string>1202.466</string>
+          <string>1204.508</string>
+          <string>1206.69</string>
+          <string>1208.143</string>
+          <string>1208.321</string>
+
+          <string>1301.344</string>
+          <string>1301.404</string>
+          <string>1301.452</string>
+          <string>1302.143</string>
+          <string>1303.075</string>
+          <string>1304.15</string>
+          <string>1305.234</string>
+          <string>1305.328</string>
+          <string>1306.69</string>
+          <string>1307.34</string>
+          <string>1307.35</string>
+          <string>1307.36</string>
+        </array>
+
+        <key>default</key> <string>1307.36</string>
+      </dict>
+
+      <!-- Custom User Agent -->
+      <dict>
+        <key>cell</key>
+        <string>PSGroupCell</string>
+        <key>label</key>
+        <string>Custom</string>
+      </dict>
+      <dict>
+        <key>cell</key>     <string>PSSwitchCell</string>
+        <key>default</key>  <true/>
+        <key>defaults</key> <string>com.derv82.exchangent</string>
+        <key>key</key>      <string>useCustomUserAgent</string>
+        <key>label</key>    <string>Use Custom User-Agent</string>
+      </dict>
+      <dict>
+        <key>cell</key>        <string>PSEditTextCell</string>
+        <key>detail</key>      <string>PSDetailController</string>
+        <key>defaults</key>    <string>com.derv82.exchangent</string>
+        <key>key</key>         <string>userAgent</string>
+        <key>default</key>     <string>iPhone8C2/1307.36</string>
+        <key>label</key>       <string>User-Agent:</string>
+      </dict>
+    </array>
+
+    <key>title</key>
+    <string>Exchangent</string>
+
+  </dict>
 </plist>
