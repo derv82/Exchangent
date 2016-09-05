@@ -38,7 +38,7 @@
            [specifiersToRemove addObject:specifier];
          } else if ([specifier.identifier isEqualToString:@"iOS Version"]) {
            [specifiersToRemove addObject:specifier];
-         } else if ([specifier.identifier isEqualToString:@"Preset User-Agent"]) {
+         } else if ([specifier.identifier isEqualToString:@"User-Agent"]) {
            [specifiersToRemove addObject:specifier];
          }
        }
@@ -80,7 +80,7 @@
   }
 
   if ([key isEqualToString:@"device"] || [key isEqualToString:@"iosVersion"]) {
-    [self reloadSpecifierID:@"Preset User-Agent"];
+    [self reloadSpecifierID:@"User-Agent"];
   }
   return result;
 }
