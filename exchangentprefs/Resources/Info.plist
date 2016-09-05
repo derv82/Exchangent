@@ -5,9 +5,9 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
-	<string>Exchangent</string>
+	<string>ExchangentPrefs</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.derv82.exchangent</string>
+	<string>com.derv82.exchangentprefs</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundlePackageType</key>
@@ -19,6 +19,6 @@
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>NSPrincipalClass</key>
-	<string>exchangentRootListController</string>
+	<string>ExchangentPrefsRootListController</string>
 </dict>
 </plist>

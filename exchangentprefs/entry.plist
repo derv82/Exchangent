@@ -5,11 +5,11 @@
 	<key>entry</key>
 	<dict>
 		<key>bundle</key>
-		<string>Exchangent</string>
+		<string>ExchangentPrefs</string>
 		<key>cell</key>
 		<string>PSLinkCell</string>
 		<key>detail</key>
-		<string>exchangentRootListController</string>
+		<string>ExchangentPrefsRootListController</string>
 		<key>icon</key>
 		<string>Exchangent.png</string>
 		<key>isController</key>
