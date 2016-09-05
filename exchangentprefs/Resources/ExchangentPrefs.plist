@@ -295,7 +295,7 @@
         <key>cell</key>     <string>PSStaticTextCell</string>
         <key>defaults</key> <string>com.derv82.exchangentprefs</string>
         <key>key</key>      <string>presetUserAgent</string>
-        <key>label</key>    <string>Stuff goes here</string>
+        <key>label</key>    <string>Preset User-Agent</string>
       </dict>
 
       <!-- Custom User Agent -->
