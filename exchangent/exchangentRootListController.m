@@ -4,7 +4,9 @@
 
 - (NSArray *)specifiers {
 	if (!_specifiers) {
-		_specifiers = [[self loadSpecifiersFromPlistName:@"Exchangent" target:self] retain];
+     NSMutableArray *specifiers = [[self loadSpecifiersFromPlistName:@"Exchangent" target:self] mutableCopy];
+     _specifiers = [specifiers copy];
+     [specifiers release];
 	}
 
 	return _specifiers;
