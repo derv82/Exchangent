@@ -1,30 +1,32 @@
-#define kIdentifier CFSTR("com.derv82.exchangentprefs")
+@interface NSUserDefaults (Private)
+- (instancetype)_initWithSuiteName:(NSString *)suiteName container:(NSURL *)container;
+- (instancetype)initWithSuiteName:(NSString *)suitename;
+@end
 
-BOOL pref_bool(CFStringRef key, BOOL defaultValue) {
- id value = (id) CFPreferencesCopyAppValue(key, kIdentifier);
- HBLogDebug(@"Exchangent pref_bool key: %@ value: %@", key, value);
- return value ? [value boolValue] : defaultValue;
-}
+static NSString *const kPreferencesDomain = @"com.derv82.exchangentprefs";
+NSUserDefaults *userDefaults;
 
-NSString *pref_string(CFStringRef key, NSString *defaultValue) {
-  id value = (id) CFPreferencesCopyAppValue(key, kIdentifier);
-  HBLogDebug(@"Exchangent pref_string key: %@ value: %@", key, value);
-  return value ? (NSString *) value : defaultValue;
-}
-
-static void notificationCallback(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo) {
-  HBLogDebug(@"Exchangent notificationCallback() for %@", name);
-  CFPreferencesAppSynchronize(kIdentifier);
-}
+%ctor {
+  // Initialize settings 
+  userDefaults = [[NSUserDefaults alloc] _initWithSuiteName:kPreferencesDomain container:[NSURL URLWithString:@"/var/mobile"]];
+  [userDefaults registerDefaults:@{
+       @"enabled": @YES,
+     @"useCustom": @NO,
+        @"device": @"iPhone8C2",
+    @"iosVersion": @"1307.36",
+  }];
+};
 
 %hook DATaskManager
 
 -(id)userAgent {
   id defaultUserAgent = %orig;
 
-  BOOL prefIsEnabled = pref_bool(CFSTR("enabled"), YES);
-  BOOL prefUseCustom = pref_bool(CFSTR("useCustom"), NO);
-  NSString *prefDevice = pref_string(CFSTR("device"), @"iPhone8C2");
+  BOOL prefIsEnabled = [userDefaults boolForKey:@"enabled"];
+  BOOL prefUseCustom = [userDefaults boolForKey:@"useCustom"];
+  NSString *prefDevice = [userDefaults stringForKey:@"device"];
+
+  HBLogDebug(@"Exchangent userDefaults: %@", [userDefaults dictionaryRepresentation]);
 
   HBLogDebug(@"Exchangent isEnabled: %d", prefIsEnabled);
   HBLogDebug(@"Exchangent useCustom: %d", prefUseCustom);
@@ -41,15 +43,4 @@ static void notificationCallback(CFNotificationCenterRef center, void *observer,
 }
 
 %end
-
-%ctor {
-  notificationCallback(NULL, NULL, NULL, NULL, NULL);
-  CFNotificationCenterAddObserver(
-      CFNotificationCenterGetDarwinNotifyCenter(),
-      NULL,
-      (CFNotificationCallback)notificationCallback,
-      CFStringCreateWithFormat(NULL, NULL, CFSTR("%@/saved"), kIdentifier),
-      NULL,
-      CFNotificationSuspensionBehaviorCoalesce);
-}
 
