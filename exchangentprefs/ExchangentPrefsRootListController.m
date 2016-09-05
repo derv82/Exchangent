@@ -1,6 +1,10 @@
 #import <Preferences/PSListController.h>
+#import <Preferences/PSSpecifier.h>
 
-@interface ExchangentPrefsRootListController : PSListController
+#define nsPreferencesPath @"/User/Library/Preferences/com.derv82.exchangentprefs.plist"
+
+@interface ExchangentPrefsRootListController : PSListController {
+}
 @end
 
 @implementation ExchangentPrefsRootListController
@@ -14,25 +18,23 @@
 	return _specifiers;
 }
 
-/*
 -(id) readPreferenceValue:(PSSpecifier*)specifier {
-    NSDictionary *messagesTintSettings = [NSDictionary dictionaryWithContentsOfFile:messagesTintPath];
-    if (!messagesTintSettings[specifier.properties[@"key"]]) {
+    NSDictionary *exchangentSettings = [NSDictionary dictionaryWithContentsOfFile:nsPreferencesPath];
+    if (!exchangentSettings[specifier.properties[@"key"]]) {
         return specifier.properties[@"default"];
     }
-    return messagesTintSettings[specifier.properties[@"key"]];
+    return exchangentSettings[specifier.properties[@"key"]];
 }
 
 -(void) setPreferenceValue:(id)value specifier:(PSSpecifier*)specifier {
     NSMutableDictionary *defaults = [NSMutableDictionary dictionary];
-    [defaults addEntriesFromDictionary:[NSDictionary dictionaryWithContentsOfFile:messagesTintPath]];
+    [defaults addEntriesFromDictionary:[NSDictionary dictionaryWithContentsOfFile:nsPreferencesPath]];
     [defaults setObject:value forKey:specifier.properties[@"key"]];
-    [defaults writeToFile:messagesTintPath atomically:YES];
-    //  NSDictionary *messagesTintSettings = [NSDictionary dictionaryWithContentsOfFile:messagesTintPath];
+    [defaults writeToFile:nsPreferencesPath atomically:YES];
     CFStringRef toPost = (CFStringRef)specifier.properties[@"PostNotification"];
-    if(toPost) CFNotificationCenterPostNotification(CFNotificationCenterGetDarwinNotifyCenter(), toPost, NULL, NULL, YES);
-    system("killall -9 MobileSMS");
+    if (toPost) {
+      CFNotificationCenterPostNotification(CFNotificationCenterGetDarwinNotifyCenter(), toPost, NULL, NULL, YES);
+    }
 }
-*/
 
 @end
