@@ -6,7 +6,6 @@
     <array>
       <dict>
         <key>cell</key>  <string>PSGroupCell</string>
-        <key>label</key> <string>Exchangent</string>
       </dict>
 
       <!-- Enabled -->
@@ -322,6 +321,20 @@
         <key>label</key>       <string>User-Agent:</string>
         <key>PostNotification</key> <string>com.derv82.exchangentprefs/saved</string>
       </dict>
+
+      <!-- Footer -->
+      <dict>
+        <key>cell</key>       <string>PSGroupCell</string>
+        <key>footerText</key> <string>(c) 2016 Dave McClain (derv82)</string>
+      </dict>
+
+      <dict>
+        <key>cell</key>   <string>PSButtonCell</string>
+        <key>action</key> <string>GithubButtonAction</string>
+        <key>icon</key>   <string>Github.png</string>
+        <key>label</key>  <string>See this tweak's source code on GitHub</string>
+      </dict>
+
     </array>
 
     <key>title</key>

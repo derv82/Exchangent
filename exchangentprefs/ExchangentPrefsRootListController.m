@@ -134,4 +134,9 @@
   }
 }
 
+-(void) GithubButtonAction {
+  NSURL *ghUrl = [NSURL URLWithString:@"https://github.com/derv82/Exchangent"];
+  [[UIApplication sharedApplication] openURL:ghUrl];
+}
+
 @end
