@@ -10,3 +10,6 @@ There are some built-in devices/versions, or there is an option to manually ente
 
 ## Screenshots
 
+![Preferences page, preset device/version user-agent](https://github.com/derv82/Exchangent/raw/master/screenshots/IMG_1697.PNG)
+
+![Preferences page, custom user-agent](https://github.com/derv82/Exchangent/raw/master/screenshots/IMG_1699.PNG)
