@@ -1,1 +1,7 @@
-{ Filter = { Bundles = ( "com.apple.mobilemail" ); }; }
+{
+  Filter = {
+    Bundles = (
+      "com.apple.mobilemail"
+    );
+  };
+}

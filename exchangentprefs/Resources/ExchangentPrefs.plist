@@ -80,6 +80,8 @@
           <string>iPhone 6S</string>
           <string>iPhone 6S Plus</string>
           <string>iPhone SE</string>
+          <string>iPhone 7</string>
+          <string>iPhone 7 Plus</string>
         </array>
 
         <key>validValues</key>
@@ -127,6 +129,8 @@
           <string>iPhone8C1</string>
           <string>iPhone8C2</string>
           <string>iPhone8C4</string>
+          <string>iPhone9C3</string>
+          <string>iPhone9C4</string>
         </array>
         <key>default</key>          <string>iPhone8C2</string>
         <key>PostNotification</key> <string>com.derv82.exchangentprefs/saved</string>
@@ -208,6 +212,10 @@
           <string>9.3.3</string>
           <string>9.3.4</string>
           <string>9.3.5</string>
+
+          <string>10.0.1</string>
+          <string>10.0.2</string>
+          <string>10.1</string>
         </array>
 
         <key>validValues</key>
@@ -278,9 +286,13 @@
           <string>1307.34</string>
           <string>1307.35</string>
           <string>1307.36</string>
+
+          <string>1401.403</string>
+          <string>1401.456</string>
+          <string>1402.72</string>
         </array>
 
-        <key>default</key> <string>1307.36</string>
+        <key>default</key> <string>1402.72</string>
         <key>PostNotification</key> <string>com.derv82.exchangentprefs/saved</string>
       </dict>
 
@@ -317,7 +329,7 @@
         <key>detail</key>      <string>PSDetailController</string>
         <key>defaults</key>    <string>com.derv82.exchangentprefs</string>
         <key>key</key>         <string>customUserAgent</string>
-        <key>default</key>     <string>iPhone8C2/1307.36</string>
+        <key>default</key>     <string>iPhone8C2/1402.72</string>
         <key>label</key>       <string>User-Agent:</string>
         <key>PostNotification</key> <string>com.derv82.exchangentprefs/saved</string>
       </dict>
