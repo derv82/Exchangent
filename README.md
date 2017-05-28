@@ -1,3 +1,9 @@
+# DEPRECATED / NOT WORKING
+
+Note: This tweak no longer works. I'm not sure what changed, or why, and I can't figure out how to spoof the device version for Exchange on iOS.
+
+Leaving the Repo up as it was my first iOS tweak and I learned a lot: https://github.com/derv82/Exchangent/wiki
+
 # Exchangent
 
 Jailbreak tweak to spoof for the Exchange/ActiveSync user-agent on iOS9.
